@@ -4,11 +4,7 @@ const { generateResponse } = require('./genai');
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the API' });
-});
-
-app.post('/questions', (req, res) => {
+app.post('/api/questions', (req, res) => {
     let customerInput = req.body.question;
     let companyPolicies = "Our return policy for large items allows customers to return products within 30 days of purchase, provided they are in their original condition and packaging. Customers are responsible for return shipping costs unless the item is defective or damaged upon arrival.";
 
